@@ -19,17 +19,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::middleware('auth:api')->group(function () {
 
-	Route::get('/orders', 'OrderController@getUserOrders');
+    Route::get('/orders', 'OrderController@getUserOrders');
     Route::post('/orders', 'OrderController@store');
     Route::put('/orders', 'OrderController@confirmTransaction');
     Route::delete('/orders/{id}', 'OrderController@destroy');
 
-});
-
-Route::get('/mail', function () {
-    $data = ['name' => 'хуй'];
-
-    return new App\Mail\OrderConfirmed($data);
 });
 
 Route::post('/register', 'UserController@create');
