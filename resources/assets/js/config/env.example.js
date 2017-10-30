@@ -1,4 +1,4 @@
-export const httpRoot = 'http://api-auth.local'
+export const httpRoot = 'https://example.local'
 export const clientSecret = 'UHeo5XTcxvheqDm74oIRni3bj0q3iea5ae27HHIZ'
 export const getHeaders = () => {
   const user = JSON.parse(window.localStorage.getItem('authUser')) || {}
